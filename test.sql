@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 24, 2020 at 06:16 PM
+-- Generation Time: Nov 24, 2020 at 12:05 PM
 -- Server version: 10.4.16-MariaDB
 -- PHP Version: 7.4.12
 
@@ -75,8 +75,8 @@ CREATE TABLE `ticket` (
 --
 
 CREATE TABLE `trains` (
-  `Train_num` int(10) NOT NULL,
-  `train_date` date NOT NULL,
+  `Train no.` int(10) NOT NULL,
+  `date` date NOT NULL,
   `sl_seats` int(11) NOT NULL,
   `ac_seats` int(11) NOT NULL,
   `avail_sl` int(11) NOT NULL,
@@ -125,7 +125,7 @@ ALTER TABLE `ticket`
 -- Indexes for table `trains`
 --
 ALTER TABLE `trains`
-  ADD PRIMARY KEY (`Train_num`,`train_date`);
+  ADD PRIMARY KEY (`Train no.`,`date`);
 
 --
 -- Indexes for table `user`
@@ -157,7 +157,7 @@ ALTER TABLE `user`
 -- Constraints for table `bookings`
 --
 ALTER TABLE `bookings`
-  ADD CONSTRAINT `Foreign` FOREIGN KEY (`Train_no.`,`date`) REFERENCES `trains` (`Train_num`, `train_date`);
+  ADD CONSTRAINT `Foreign` FOREIGN KEY (`Train_no.`,`date`) REFERENCES `trains` (`Train no.`, `date`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
