@@ -17,7 +17,7 @@
 
         $result=mysqli_query($conn,$sql) or trigger_error(mysql_error.$sql);
 
-        if(mysqli_num_rows($result) < 0)
+        if(mysqli_num_rows($result) < 1)
         {
             echo " .... LOGIN TRY  ....";
             $_SESSION['error'] = "1";
@@ -36,7 +36,7 @@
 <div class="forms">
     <form action="login.php" method="post">
         User Name : <input type="text" name="username" placeholder="Enter username"><br>
-        Password  :  <input type="password" name="password" placeholder="Enter password"><br>
+        Password  :  <input type="text" name="password" placeholder="Enter password"><br>
         <input type="submit" value="Submit" name="Submit">
     </form>
 </div>
