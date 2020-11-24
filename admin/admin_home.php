@@ -18,7 +18,7 @@
         mysqli_select_db($conn,"$db_name")or die("cannot select DB");
         
         $sql = "INSERT INTO trains (Train_num, train_date, sl_seats,ac_seats,avail_sl,avail_ac)
-                VALUES ($tr_no,$tr_date,18*$sleeper_coach,24*$ac_coach,18*$sleeper_coach,24*$ac_coach)";
+                VALUES ('$tr_no','$tr_date','18*$sleeper_coach','24*$ac_coach','18*$sleeper_coach','24*$ac_coach')";
 
         if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
