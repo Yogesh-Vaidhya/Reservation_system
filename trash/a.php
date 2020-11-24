@@ -66,7 +66,7 @@ $AC_sitting = array("LB","LB","UB","UB","SL","SU");
 $SL_sitting = array("LB","MB","UB","LB","MB","UB","SL","SU");
 
 if($seat=="AC") {
-
+	
 	$seat_no = $coach_cnt*18 - $value + 1;
 	$coach_no = ceil($value/18)+1-$coach_cnt;
 	$seat_type = $AC_sitting[($seat_no-1)%6];
