@@ -11,14 +11,14 @@
         $tr_no=$_POST['train_no'];
         $tr_date=$_POST['train_date'];
         $ac_coach = $_POST['ac_coach'];
-        $sleeper_coach = $_POST['sleeper_coach']; 
+        $sl_coach = $_POST['sleeper_coach']; 
         $tbl_name="trains";
         echo $tr_date;
-        echo $_POST['train_date'];
+        //echo $_POST['train_date'];
         mysqli_select_db($conn,"$db_name")or die("cannot select DB");
         
-        $sql = "INSERT INTO trains (Train_num, train_date, sl_seats,ac_seats,avail_sl,avail_ac)
-                VALUES ($tr_no,$tr_date,18*$sleeper_coach,24*$ac_coach,18*$sleeper_coach,24*$ac_coach)";
+        $sql = "INSERT INTO trains(Train_no,date, sl_seats,ac_seats,avail_sl,avail_ac)
+                VALUES ('$tr_no','$tr_date','18*$sl_coach','24*$ac_coach','18*$sl_coach','24*$ac_coach')";
 
         if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
