@@ -12,8 +12,8 @@
 		<ul>
 			<li><a href="../index.php">Home</a></li>
 			<li><a href="../Admin/login.php">Admin</a></li>
-			<li><a href="../user/login.php">User</a></li>
-			<li><a href="user/mine_register.php">SignUp</a></li>
+			<li><a href="#contact">Booking Agent</a></li>
+			<li><a href="#home">SignUp</a></li>
 			<li><a href="#about">About</a></li>
 		</ul>
 	</div>
