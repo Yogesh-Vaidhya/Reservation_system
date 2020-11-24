@@ -19,7 +19,7 @@
 
         $result=mysqli_query($conn,$sql) or trigger_error(mysql_error.$sql);
       
-        if(mysqli_num_rows($result) < 0)
+        if(mysqli_num_rows($result) < 1)
         {
             echo " .... LOGIN TRY  ....";
             $_SESSION['error'] = "1";

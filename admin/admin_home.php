@@ -9,6 +9,9 @@
     include("../dbconnect.php");
     if(isset($_POST["Submit"])){
         $tr_no=$_POST['train_no'];
+        $tr_name = $_POST['train_name'];
+        $src = $_POST['src'];
+        $dest = $_POST['dest'];
         $tr_date=$_POST['train_date'];
         $ac_coach = $_POST['ac_coach'];
         $sl_coach = $_POST['sleeper_coach'];
@@ -17,8 +20,8 @@
         //echo $_POST['train_date'];
         mysqli_select_db($conn,"$db_name")or die("cannot select DB");
 
-        $sql = "INSERT INTO trains(Train_no,date, sl_seats,ac_seats,avail_sl,avail_ac)
-                VALUES ('$tr_no','$tr_date','18*$sl_coach','24*$ac_coach','18*$sl_coach','24*$ac_coach')";
+        $sql = "INSERT INTO trains(Train_no,name,src,dest,date, sl_seats,ac_seats,avail_sl,avail_ac)
+                VALUES ('$tr_no','$tr_name','$src','$dest','$tr_date','18*$sl_coach','24*$ac_coach','18*$sl_coach','24*$ac_coach')";
 
         if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
@@ -41,6 +44,9 @@
 <div class="forms">
     <form action="admin_home.php" method="post">
         Train Number : <input type="number" name="train_no" placeholder = "Enter train number"><br>
+        Name : <input type="text" name="train_name" placeholder = "Enter train name"><br>
+        Source : <input type="text" name="src" placeholder = "Source"><br>
+        Destination : <input type="text" name="dest" placeholder = "Enter Destination"><br>
         Train Date   : <input type="date" name="train_date" placeholder = "Enter date of departure"><br>
         AC Coaches : <input type="number" name="ac_coach" placeholder = "Enter no. of AC coaches"><br>
         Sleeper Coaches : <input type="number" name="sleeper_coach" placeholder = "Enter no. of Slepper coaches"><br>
