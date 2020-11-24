@@ -1,15 +1,9 @@
-<?php 
-$dbhost = 'localhost';
-$dbname = 'dbtest';
-$dbuser = 'root';
-$dbpass = '';
+<?php
+$host="localhost"; // Host name
+$username="root"; // Mysql username
+$password=""; // Mysql password
+$db_name="dbportal"; // Database name
 
-try {
-	$db = new PDO("mysql:host={$dbhost};dbname={$dbname}",$dbuser,$dbpass);
-	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
+$conn=mysqli_connect("$host", "$username", "$password")or die("cannot connect");
 
-catch(PDOException $e) {
-	echo "Connection error: ".$e->getMessage();
-}
 ?>
