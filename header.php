@@ -6,13 +6,14 @@
 	<title>Welcome To Railway Reservation System</title>
 	<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 	<div class = "navbar">
 		<ul>
 			<li><a href="../index.php">Home</a></li>
-			<li><a href="../admin/login.php">Admin</a></li>
-			<li><a href="../user/login.php">User</a></li>
-			<li><a href="../user/mine_register.php">SignUp</a></li>
-			<li><a href="#about">About</a></li>
+			<li><a href="admin/login.php">Admin</a></li>
+			<li><a href="user/login.php">User</a></li>
+			<li><a href="user/mine_register.php">SignUp</a></li>
+			<li><a href="">About</a></li>
 		</ul>
 	</div>
